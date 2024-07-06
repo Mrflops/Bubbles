@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9cd45206-01fe-40c6-a20f-a70051bb886b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Main/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main/test/Test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main/test/orig_img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main/test/output_image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Training/example.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Training/train.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calibration/calibrate.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calibration/settings.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/Test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/orig_img.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/output_image.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
