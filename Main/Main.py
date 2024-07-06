@@ -1,6 +1,9 @@
+from flask import Flask, render_template, Response
 import cv2
 import pupil_apriltags as apriltag
 import numpy as np
+
+app = Flask(__name__)
 
 # Known parameters
 KNOWN_TAG_SIZE = 0.165  # in meters, change this to your tag's actual size
@@ -26,24 +29,20 @@ def estimate_distance(corners):
     average_width = (width1 + width2 + width3 + width4) / 4.0
     # Estimate the distance to the tag
     distance = (KNOWN_TAG_SIZE * FOCAL_LENGTH) / average_width
-    return distance, (width1, width2, width3, width4), average_width
+    return distance
 
-def main():
-    # Initialize the video capture
+def generate_frames():
     cap = cv2.VideoCapture(0)  # Change the index if you have multiple cameras
 
     if not cap.isOpened():
-        print("Error: Unable to open camera")
-        return
+        raise RuntimeError("Error: Unable to open camera")
 
-    # Create an AprilTag detector
     detector = apriltag.Detector()
 
     while True:
         # Capture frame-by-frame
         ret, frame = cap.read()
         if not ret:
-            print("Error: Unable to read frame")
             break
 
         # Convert to grayscale
@@ -54,27 +53,26 @@ def main():
         for tag in tags:
             corners = tag.corners.astype(int)
             tag_id = tag.tag_id
-            distance, perceived_widths, average_width = estimate_distance(corners)
-
-            # Debugging output
-            print(f"Tag ID: {tag_id}")
-            print(f"Corners: {corners}")
-            print(f"Perceived Widths: {perceived_widths}")
-            print(f"Average Perceived Width: {average_width}")
-            print(f"Estimated Distance: {distance:.2f}m")
-
+            distance = estimate_distance(corners)
             draw_tag(frame, corners, tag_id, distance)
 
-        # Display the resulting frame
-        cv2.imshow('AprilTag Detection', frame)
+        # Encode the frame in JPEG format
+        ret, buffer = cv2.imencode('.jpg', frame)
+        frame = buffer.tobytes()
 
-        # Break the loop on 'q' key press
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
+        # Yield the frame in byte format
+        yield (b'--frame\r\n'
+               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
-    # When everything is done, release the capture
     cap.release()
-    cv2.destroyAllWindows()
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/video_feed')
+def video_feed():
+    return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == '__main__':
-    main()
+    app.run(host='0.0.0.0', port=5000, debug=True)
