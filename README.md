@@ -12,3 +12,15 @@ $ pip install numpy
 Before using main.py, please calibrate in calibrate.py
 
 🛈 calibrate.py is currently under development, if you know your focal length and Apriltag length import it manually in settings.txt
+
+### Flask
+🛈 Under development
+
+## Calibration
+🛈 Under development
+
+## Custom Training
+🛈 Under development
+
+### RKNN
+🛈 Under development
