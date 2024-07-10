@@ -62,5 +62,5 @@ def main(image_path):
     print(f"Output image saved to {output_image_path}")
 
 if __name__ == '__main__':
-    image_path = 'orig_img.jpg'  # Replace with the path to your image
+    image_path = 'apriltagrobots_overlay.jpg'  # Replace with the path to your image
     main(image_path)

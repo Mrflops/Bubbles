@@ -8,6 +8,7 @@ $ pip install flask
 $ pip install opencv-python
 $ pip install pupil_apriltags
 $ pip install numpy
+$ pip install glob
 ```
 Before using main.py, please calibrate in calibrate.py
 
