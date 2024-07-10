@@ -5,7 +5,6 @@ import numpy as np
 # Known parameters
 KNOWN_TAG_SIZE = 0.165  # in meters, change this to your tag's actual size
 FOCAL_LENGTH = 700  # in pixels, you need to determine this for your camera
-
 def draw_tag(image, corners, tag_id, distance):
     # Draw lines between corners
     for i in range(4):
@@ -55,7 +54,6 @@ def main(image_path):
         print(f"Estimated Distance: {distance:.2f}m")
 
         draw_tag(image, corners, tag_id, distance)
-
     # Save the output image
     output_image_path = 'output_image.png'
     cv2.imwrite(output_image_path, image)
