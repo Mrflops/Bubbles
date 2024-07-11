@@ -28,5 +28,5 @@ After running main.py, the display output would be in a ip running in your local
 ## Custom Training
 ```🛈``` | Under development
 
-### RKNN
+### YOLOv8
 ```🛈``` | Under development
