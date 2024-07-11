@@ -12,16 +12,21 @@ $ pip install glob
 ```
 Before using main.py, please calibrate in calibrate.py
 
-🛈 calibrate.py is currently under development, if you know your focal length and Apriltag length import it manually in settings.txt
+```🛈``` | calibrate.py is currently under development, if you know your focal length and Apriltag length import it manually in settings.txt
 
 ### Flask
-🛈 Under development
+
+After running main.py, the display output would be in a ip running in your localhost.
+
+```🛈``` | Use ```http://``` instead of ```https://``` when typing the link.
+
+```🛈``` | This is still under development! Either this kind of works or doesn't.
 
 ## Calibration
-🛈 Under development
+```🛈``` | Under development
 
 ## Custom Training
-🛈 Under development
+```🛈``` | Under development
 
 ### RKNN
-🛈 Under development
+```🛈``` | Under development
