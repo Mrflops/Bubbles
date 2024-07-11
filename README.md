@@ -12,6 +12,8 @@ $ pip install glob
 ```
 Before using main.py, please calibrate in calibrate.py
 
+testing.py is also offered as a safe alternative to test the detection before using the main script
+
 ```🛈``` | calibrate.py is currently under development, if you know your focal length and Apriltag length import it manually in settings.txt
 
 ### Flask
@@ -28,5 +30,5 @@ After running main.py, the display output would be in a ip running in your local
 ## Custom Training
 ```🛈``` | Under development
 
-### RKNN
+### YOLOv8
 ```🛈``` | Under development

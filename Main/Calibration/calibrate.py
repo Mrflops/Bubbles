@@ -1,6 +1,6 @@
 file_path = 'settings.txt'
 x = int(input("Enter tag size (In meters): "))
-y = 2134  # Placeholder value
+y = 700  # Placeholder value
 
 # Read the file content line by line
 with open(file_path, 'r') as file:
