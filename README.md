@@ -37,6 +37,6 @@ Custom training is in train.py using the model [YOLOv8](https://github.com/ultra
 
 ```🛈``` | Under development
 
-### YOLOv8
+### Model Deployment
 
 ```🛈``` | Under development
