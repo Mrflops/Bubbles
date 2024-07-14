@@ -1,5 +1,5 @@
-# Bubbles
-Bubbles is a Apriltag detection system developed by FRC Team 10015
+# 🫧 Bubbles
+Bubbles is a Apriltag detection system developed by FRC Team 10015 [RuiQi]
 
 ## Usage
 Install these packages manditory to use main.py and other scripts:
@@ -41,4 +41,4 @@ Custom training is in train.py using the model [YOLOv8](https://github.com/ultra
 
 ```🛈``` | Under development
 
-[🌟 Spare a Star?]
+[🌟 Spare a Star?] [
