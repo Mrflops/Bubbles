@@ -40,3 +40,5 @@ Custom training is in train.py using the model [YOLOv8](https://github.com/ultra
 ### Model Deployment
 
 ```🛈``` | Under development
+
+[🌟 Spare a Star?]
